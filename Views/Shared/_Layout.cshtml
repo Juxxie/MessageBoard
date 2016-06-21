@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="@ViewBag.InitModule">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - MessageBoard</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link href="~/Content/themes/base/minified/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.accordion.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.autocomplete.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.button.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.core.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.datepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.dialog.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.progressbar.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.resizable.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.selectable.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.slider.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.tabs.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <!-- Sliding Share Panel. Click "Share it" to see. -->
+    <div class="sharepanel panel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="">
+                        <!-- Small Para -->
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="padd">
+                        <!-- Social media icons. -->
+                        <a href="#">FaceBook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Linkedin</a>
+                        <a href="#">GooglePlus</a>
+                        <a href="#">RSS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title navbar-header">@Html.ActionLink("your logo here", "Index", "Home")</p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+                <nav>
+                    <ul id="menu" class="navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("My Messages", "MyMessages", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - MessageBoard</p>
+            </div>
+        </div>
+    </footer>
+    <script src="~/Scripts/jquery-2.2.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.debug.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

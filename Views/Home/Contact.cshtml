@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+@section scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+<div class="col-lg-12">
+    <div class="">
+        <div class="posts">
+            <div class="entry">
+                <div class="">
+                    <h2>Contact Us</h2>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="">
+                            <div class="">
+                                <form method="post">
+                                    <fieldset>
+                                        <div class="control-group">
+                                            <label class="control-label" for="name">Name</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-medium" id="name" name="name" data-val="true" data-val-required="*" />
+                                                <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="email">Email</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-medium" id="email" name="email" data-val="true" data-val-required="*" data-val-email="Not Valid" />
+                                                <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="website">Website</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-medium" id="website" name="website" data-val="true" data-val-required="*" />
+                                                <span class="field-validation-valid" data-valmsg-for="website" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="comment">Message</label>
+                                            <div class="controls">
+                                                <textarea class="input-medium" id="comment" rows="3" name="comment" data-val="true" data-val-required="*"></textarea>
+                                                <span class="field-validation-valid" data-valmsg-for="comment" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn">Send</button>
+                                            @if (ViewBag.MailSent != null && ViewBag.MailSent)
+                                            {
+                                                <div>Mail Sent!</div>
+                                            }
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="padd">
+                            <p class="address">
+                                <address>
+                                    <strong>Twitter, Inc.</strong><br />
+                                    795 Folsom Ave, Suite 600<br />
+                                    San Francisco, CA 94107<br />
+                                    <abbr title="Phone">P:</abbr>
+                                    (123) 456-7890.<br />
+                                    <br />
+                                    <strong>Full Name</strong><br />
+                                    <a href="mailto:#">first.last@gmail.com</a>
+                                </address>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
